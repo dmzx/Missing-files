@@ -2,7 +2,7 @@
 	"name": "dmzx/missingfiles",
 	"type": "phpbb-extension",
 	"description": "Check for missing files on you board.",
-	"homepage": "",
+	"homepage": "https://www.dmzx-web.net",
 	"version": "1.0.0",
 	"time": "2020-08-03",
 	"keywords": [
@@ -20,7 +20,7 @@
 		},
 		{
 			"name": "martin",
-			"email": "",
+			"email": "info@dmzx-web.net",
 			"homepage": "https://www.martins-phpbb.com",
 			"role": "Extension developer"
 		}
