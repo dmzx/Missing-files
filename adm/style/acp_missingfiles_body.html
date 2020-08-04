@@ -1,0 +1,38 @@
+{% include 'overall_header.html' %}
+
+<h1>{{ lang('ACP_MISSINGFILES_TITLE') }}</h1>
+
+<p><img src="https://img.shields.io/badge/{{ lang('ACP_MISSINGFILES_VERSION') }}-{{ ACP_MISSINGFILES_VERSION }}-green.svg?style=plastic" /></p>
+
+{# Include - CSS #}
+{% if not definition.INCLUDED_MISSINGFILES %}
+	{% INCLUDECSS '@dmzx_missingfiles/css/acp_missingfiles.css' %}
+	{% DEFINE INCLUDED_INCLUDED_MISSINGFILES = true %}
+{% endif %}
+
+<div class="dmzx-panel">
+	{% if missingfiles|length %}
+	<div class="successbox notice">{{ lang('ACP_MISSINGFILES_EXPLAIN') }}</div>
+	<table>
+		<thead>
+			<tr>
+				<th class="th1">{{ lang('ACP_MISSINGFILES_FILES') }} - {{ lang('ACP_MISSINGFILES_TOTAL') ~ lang('COLON') }} {{ missingfiles|length }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for missingfile in missingfiles %}
+				<tr>
+					<td class="dmzx-left"><em>{{ missingfile.MISSINGFILES }}</em></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% else %}
+	<div class="dmzx-center">
+		<strong>{{ lang('ACP_MISSINGFILES_ALL_OK') }}</strong>
+	</div>
+{% endif %}
+</div>
+
+{% include 'overall_footer.html' %}
+
