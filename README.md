@@ -1,6 +1,6 @@
 # Missing Files Extension
 
-[![Build Status](https://travis-ci.org/dmzx/Missing-files.svg?branch=master)](https://travis-ci.org/dmzx/Missing-files)
+[![Build Status](https://github.com/dmzx/Missing-files/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/dmzx/Missing-files)
 
 ## Install
 1. Download the latest release.
