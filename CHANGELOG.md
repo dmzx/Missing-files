@@ -4,6 +4,7 @@
 
 - Code update.
 - Code cleanup.
+- Add autosort for files.
 
 ### 1.0.0 - 2020-08-03
 
