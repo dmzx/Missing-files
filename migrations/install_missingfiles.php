@@ -10,7 +10,9 @@
 
 namespace dmzx\missingfiles\migrations;
 
-class install_missingfiles extends \phpbb\db\migration\migration
+use phpbb\db\migration\migration;
+
+class install_missingfiles extends migration
 {
 	public static function depends_on()
 	{

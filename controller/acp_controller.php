@@ -10,21 +10,26 @@
 
 namespace dmzx\missingfiles\controller;
 
+use phpbb\config\config;
+use phpbb\db\driver\driver_interface;
+use phpbb\language\language;
+use phpbb\template\template;
+
 /**
  * Missing Files ACP controller.
  */
 class acp_controller
 {
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\language\language */
+	/** @var language */
 	protected $language;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 
-	/** @var \phpbb\db\driver\driver_interface */
+	/** @var driver_interface */
 	protected $db;
 
 	/** @var string */
@@ -36,18 +41,18 @@ class acp_controller
 	/**
 	 * Constructor.
 	 *
-	 * @param \phpbb\config\config					$config
-	 * @param \phpbb\language\language				$language
-	 * @param \phpbb\template\template				$template
-	 * @param \phpbb\db\driver\driver_interface		$db
-	 * @param string								$root_path
-	 * @param array									$tables
+	 * @param config				$config
+	 * @param language				$language
+	 * @param template				$template
+	 * @param driver_interface		$db
+	 * @param string				$root_path
+	 * @param array					$tables
 	 */
 	public function __construct(
-		\phpbb\config\config $config,
-		 \phpbb\language\language $language,
-		\phpbb\template\template $template,
-		\phpbb\db\driver\driver_interface $db,
+		config $config,
+		language $language,
+		template $template,
+		driver_interface $db,
 		string $root_path,
 		array $tables
 	)
@@ -79,7 +84,7 @@ class acp_controller
 				$upload_name =	$row['real_filename'];
 
 				$this->template->assign_block_vars('missingfiles', [
-					'MISSINGFILES'		=> '<a href="' .	generate_board_url() . '/viewtopic.php?p=' . $post_id . '#p' . $post_id . '">' . $upload_name . '</a><br><br>',
+					'MISSINGFILES'		=> '<a href="' . generate_board_url() . '/viewtopic.php?p=' . $post_id . '#p' . $post_id . '">' . $upload_name . '</a><br><br>',
 				]);
 			}
 		}

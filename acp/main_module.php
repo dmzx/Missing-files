@@ -10,6 +10,10 @@
 
 namespace dmzx\missingfiles\acp;
 
+use dmzx\missingfiles\controller\acp_controller;
+use Exception;
+use phpbb\language\language;
+
 /**
  * Missing Files ACP module.
  */
@@ -24,16 +28,16 @@ class main_module
 	 *
 	 * @param int	$id	The module ID
 	 * @param string $mode The module mode (for example: manage or settings)
-	 * @throws \Exception
+	 * @throws Exception
 	 */
 	public function main($id, $mode)
 	{
 		global $phpbb_container;
 
-		/** @var \dmzx\missingfiles\controller\acp_controller $acp_controller */
+		/** @var acp_controller $acp_controller */
 		$acp_controller = $phpbb_container->get('dmzx.missingfiles.controller.acp');
 
-		/** @var \phpbb\language\language $language */
+		/** @var language $language */
 		$language = $phpbb_container->get('language');
 
 		// Load a template from adm/style for our ACP page
