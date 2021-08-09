@@ -19,7 +19,7 @@
 				<th class="th1">{{ lang('ACP_MISSINGFILES_FILES') }} - {{ lang('ACP_MISSINGFILES_TOTAL') ~ lang('COLON') }} {{ missingfiles|length }}</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id="autosort">
 			{% for missingfile in missingfiles %}
 				<tr>
 					<td class="dmzx-left"><em>{{ missingfile.MISSINGFILES }}</em></td>
@@ -34,5 +34,17 @@
 {% endif %}
 </div>
 
+<script>
+window.onload = function() {
+	var mylist = $('#autosort');
+	var listitems = mylist.find('tr');
+	listitems.sort(function(a, b) {
+		return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+	})
+	$.each(listitems, function(idx, itm) { mylist.append(itm); });
+}
+</script>
+
+{%- INCLUDEJS '@dmzx_missingfiles/js/autosort.js' -%}
 {% include 'overall_footer.html' %}
 
