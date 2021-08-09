@@ -10,10 +10,6 @@
 
 namespace dmzx\missingfiles\acp;
 
-use dmzx\missingfiles\controller\acp_controller;
-use Exception;
-use phpbb\language\language;
-
 /**
  * Missing Files ACP module.
  */
