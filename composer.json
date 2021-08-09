@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Check for missing files on you board.",
 	"homepage": "https://www.dmzx-web.net",
-	"version": "1.0.0",
-	"time": "2020-08-03",
+	"version": "1.0.1",
+	"time": "2021-08-09",
 	"keywords": [
 		"phpbb",
 		"extension",
