@@ -5,4 +5,4 @@ services:
             $root_path: '%core.root_path%'
             $tables: '%tables%'
     dmzx.missingfiles.controller.acp:
-        class: dmzx\missingfiles\controller\acp_controller
+        class: 'dmzx\missingfiles\controller\acp_controller'
